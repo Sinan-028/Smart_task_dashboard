@@ -1,13 +1,11 @@
-export default function TaskItem() {
+export default function TaskItem({ task }) {
   return (
-    <div>
-      <h3>Sample Task Title</h3>
-      <p>Sample task description</p>
-      <p>Priority: Medium</p>
-      <p>Status: To Do</p>
-      <p>Due Date: 2026-02-20</p>
-      <button>Edit</button>
-      <button>Delete</button>
+    <div style={{border:"1px solid gray", margin:"10px", padding:"10px"}}>
+      <h3>{task.title}</h3>
+      <p>{task.description}</p>
+      <p>Priority: {task.priority}</p>
+      <p>Status: {task.status}</p>
+      <p>Due: {task.dueDate}</p>
     </div>
   );
 }
