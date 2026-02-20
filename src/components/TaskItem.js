@@ -1,11 +1,28 @@
-export default function TaskItem({ task }) {
+export default function TaskItem({ task, updateTask, deleteTask }) {
+
+  const handleStatusChange = (e) => {
+    updateTask({
+      ...task,
+      status: e.target.value
+    });
+  };
+
   return (
-    <div style={{border:"1px solid gray", margin:"10px", padding:"10px"}}>
+    <div className={`task ${task.status}`}>
       <h3>{task.title}</h3>
       <p>{task.description}</p>
       <p>Priority: {task.priority}</p>
-      <p>Status: {task.status}</p>
+
+      <label>Status: </label>
+      <select value={task.status} onChange={handleStatusChange}>
+        <option>To Do</option>
+        <option>In Progress</option>
+        <option>Completed</option>
+      </select>
+
       <p>Due: {task.dueDate}</p>
+
+      <button onClick={()=>deleteTask(task.id)}>Delete</button>
     </div>
   );
 }
