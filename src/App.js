@@ -1,26 +1,27 @@
 import { useState } from "react";
-import "./App.css";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
 import FilterBar from "./components/FilterBar";
 import Summary from "./components/Summary";
+import "./App.css";
 
 function App() {
 
-  // STATE
   const [tasks, setTasks] = useState([]);
+  const [statusFilter, setStatusFilter] = useState("All");
+  const [priorityFilter, setPriorityFilter] = useState("All");
 
-  // ADD TASK
+  // ADD
   const addTask = (task) => {
     setTasks([...tasks, task]);
   };
 
-  // DELETE TASK
+  // DELETE
   const deleteTask = (id) => {
     setTasks(tasks.filter(task => task.id !== id));
   };
 
-  // UPDATE TASK (status / edit)
+  // UPDATE
   const updateTask = (updatedTask) => {
     setTasks(
       tasks.map(task =>
@@ -28,6 +29,16 @@ function App() {
       )
     );
   };
+
+  // FILTER + SORT LOGIC
+  const filteredTasks = tasks
+    .filter(task =>
+      statusFilter === "All" || task.status === statusFilter
+    )
+    .filter(task =>
+      priorityFilter === "All" || task.priority === priorityFilter
+    )
+    .sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate));
 
   return (
     <div className="container">
@@ -37,10 +48,13 @@ function App() {
 
       <TaskForm addTask={addTask} />
 
-      <FilterBar />
+      <FilterBar
+        setStatusFilter={setStatusFilter}
+        setPriorityFilter={setPriorityFilter}
+      />
 
       <TaskList
-        tasks={tasks}
+        tasks={filteredTasks}
         updateTask={updateTask}
         deleteTask={deleteTask}
       />

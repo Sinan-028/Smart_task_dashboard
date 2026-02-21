@@ -1,20 +1,21 @@
-export default function FilterBar() {
+export default function FilterBar({ setStatusFilter, setPriorityFilter }) {
   return (
-    <div>
-      <h2>Filters</h2>
-      <select>
-        <option>All Status</option>
-        <option>To Do</option>
-        <option>In Progress</option>
-        <option>Completed</option>
+    <div className="filters">
+
+      <select onChange={e => setStatusFilter(e.target.value)}>
+        <option value="All">All Status</option>
+        <option value="To Do">To Do</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
       </select>
 
-      <select>
-        <option>All Priority</option>
-        <option>Low</option>
-        <option>Medium</option>
-        <option>High</option>
+      <select onChange={e => setPriorityFilter(e.target.value)}>
+        <option value="All">All Priority</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
       </select>
+
     </div>
   );
 }
