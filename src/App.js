@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
 import FilterBar from "./components/FilterBar";
@@ -11,17 +11,30 @@ function App() {
   const [statusFilter, setStatusFilter] = useState("All");
   const [priorityFilter, setPriorityFilter] = useState("All");
 
-  // ADD
+  // LOAD SAVED TASKS
+  useEffect(() => {
+    const savedTasks = JSON.parse(localStorage.getItem("tasks"));
+    if (savedTasks) {
+      setTasks(savedTasks);
+    }
+  }, []);
+
+  // SAVE TASKS
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
+
+  // ADD TASK
   const addTask = (task) => {
     setTasks([...tasks, task]);
   };
 
-  // DELETE
+  // DELETE TASK
   const deleteTask = (id) => {
     setTasks(tasks.filter(task => task.id !== id));
   };
 
-  // UPDATE
+  // UPDATE TASK
   const updateTask = (updatedTask) => {
     setTasks(
       tasks.map(task =>
@@ -30,7 +43,7 @@ function App() {
     );
   };
 
-  // FILTER + SORT LOGIC
+  // FILTER + SORT
   const filteredTasks = tasks
     .filter(task =>
       statusFilter === "All" || task.status === statusFilter
