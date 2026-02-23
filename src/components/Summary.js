@@ -1,10 +1,27 @@
-export default function Summary() {
+export default function Summary({ tasks }) {
+
+  const total = tasks.length;
+  const completed = tasks.filter(t => t.status === "Completed").length;
+  const inProgress = tasks.filter(t => t.status === "In Progress").length;
+  const todo = tasks.filter(t => t.status === "To Do").length;
+
+  const percent = total === 0 ? 0 : Math.round((completed / total) * 100);
+
   return (
-    <div>
-      <h2>Dashboard Summary</h2>
-      <p>Total Tasks: 0</p>
-      <p>Completed Tasks: 0</p>
-      <p>Pending Tasks: 0</p>
+    <div className="summary">
+
+      <div className="card">Total: {total}</div>
+      <div className="card">Completed: {completed}</div>
+      <div className="card">In Progress: {inProgress}</div>
+      <div className="card">To Do: {todo}</div>
+
+      <div className="progressBox">
+        <p>Progress: {percent}%</p>
+        <div className="progressBar">
+          <div className="progressFill" style={{width: `${percent}%`}}></div>
+        </div>
+      </div>
+
     </div>
   );
 }
