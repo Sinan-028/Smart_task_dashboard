@@ -22,6 +22,5 @@ npm start
 
 ## Project Status
 Completed ✔
-
 ## Live Demo
-https://Sinan-028.github.io/smart-task-dashboard
+https://Sinan-028.github.io/Smart_task_dashboard
