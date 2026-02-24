@@ -22,3 +22,6 @@ npm start
 
 ## Project Status
 Completed ✔
+
+## Live Demo
+https://YOUR-USERNAME.github.io/smart-task-dashboard
