@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/smart-task-dashboard/static/css/main.89d534d3.css",
-    "main.js": "/smart-task-dashboard/static/js/main.a1cc81e5.js",
-    "static/js/453.ba1c67e5.chunk.js": "/smart-task-dashboard/static/js/453.ba1c67e5.chunk.js",
-    "index.html": "/smart-task-dashboard/index.html",
-    "main.89d534d3.css.map": "/smart-task-dashboard/static/css/main.89d534d3.css.map",
-    "main.a1cc81e5.js.map": "/smart-task-dashboard/static/js/main.a1cc81e5.js.map",
-    "453.ba1c67e5.chunk.js.map": "/smart-task-dashboard/static/js/453.ba1c67e5.chunk.js.map"
+    "main.css": "/Smart_task_dashboard/static/css/main.89d534d3.css",
+    "main.js": "/Smart_task_dashboard/static/js/main.c24d1b4f.js",
+    "static/js/453.ba1c67e5.chunk.js": "/Smart_task_dashboard/static/js/453.ba1c67e5.chunk.js",
+    "index.html": "/Smart_task_dashboard/index.html",
+    "main.89d534d3.css.map": "/Smart_task_dashboard/static/css/main.89d534d3.css.map",
+    "main.c24d1b4f.js.map": "/Smart_task_dashboard/static/js/main.c24d1b4f.js.map",
+    "453.ba1c67e5.chunk.js.map": "/Smart_task_dashboard/static/js/453.ba1c67e5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.89d534d3.css",
-    "static/js/main.a1cc81e5.js"
+    "static/js/main.c24d1b4f.js"
   ]
 }
