@@ -1,11 +1,10 @@
-/* PAGE BACKGROUND */
+
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #dfe9f3, #ffffff);
 }
 
-/* MAIN CONTAINER */
 .container {
   max-width: 900px;
   margin: 40px auto;
@@ -15,14 +14,12 @@ body {
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-/* TITLE */
 h1 {
   text-align: center;
   margin-bottom: 20px;
   color: #333;
 }
 
-/* FORM */
 form {
   display: flex;
   flex-wrap: wrap;
@@ -44,7 +41,6 @@ input:focus, select:focus {
   border-color: #6c63ff;
 }
 
-/* BUTTON */
 button {
   padding: 10px 16px;
   border: none;
@@ -60,7 +56,6 @@ button:hover {
   background: #574fd6;
 }
 
-/* TASK CARD */
 .task {
   border-radius: 14px;
   padding: 15px;
@@ -73,7 +68,6 @@ button:hover {
   transform: translateY(-2px);
 }
 
-/* STATUS COLORS */
 .To\ Do {
   background: #ffe3e3;
   border-left: 6px solid #ff6b6b;
@@ -89,7 +83,6 @@ button:hover {
   border-left: 6px solid #2ecc71;
 }
 
-/* TASK TEXT */
 .task h3 {
   margin: 0 0 5px 0;
   color: #333;
@@ -101,7 +94,6 @@ button:hover {
   font-size: 14px;
 }
 
-/* SUMMARY BOX */
 .summary {
   display: flex;
   justify-content: space-around;
@@ -112,13 +104,12 @@ button:hover {
   font-weight: bold;
 }
 
-/* FILTER BAR */
 .filters {
   display: flex;
   gap: 10px;
   margin-bottom: 15px;
 }
-/* SUMMARY CARDS */
+
 .summary {
   margin-bottom: 25px;
 }
@@ -135,7 +126,6 @@ button:hover {
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
-/* PROGRESS BAR */
 .progressBox {
   margin-top: 15px;
 }
@@ -151,4 +141,16 @@ button:hover {
   height: 100%;
   background: linear-gradient(90deg,#6c63ff,#00c9a7);
   transition: 0.4s;
+}
+
+*{
+  transition: 0.2s ease;
+}
+
+button:hover{
+  transform: scale(1.05);
+}
+
+.card:hover{
+  transform: translateY(-3px);
 }

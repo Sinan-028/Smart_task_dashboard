@@ -1,14 +1,24 @@
 # Smart Task Management Dashboard
 
-A frontend-only task management dashboard built using React.js.
+A modern frontend-only task management application built using React.js.
 
 ## Features
-- Task UI layout
-- Component structure
-- Project architecture setup
+- Add, edit, delete tasks
+- Status tracking system
+- Filtering & sorting
+- Dashboard analytics
+- Persistent storage using localStorage
+- Responsive UI design
 
 ## Tech Stack
-React.js, JavaScript, CSS
+React.js, JavaScript, CSS, LocalStorage API
 
-## Status
-Day 1 & Day 2 completed – base setup ready.
+## Live Demo
+(Your deployed link here)
+
+## Installation
+npm install
+npm start
+
+## Project Status
+Completed ✔
